@@ -144,9 +144,9 @@ bool checkSolution()
             {
                 if (captureSolutions[i][j] != captures[i][j])
                 {
-                    hint = "Check number ";
+                    hint = "Check line ";
                     hint += to_string(i+1);
-                    hint += ", Capture \\";
+                    hint += ", Capture group \\";
                     hint += to_string(j);
                     hint += "  ";
                     hint += "Expected \"" +captureSolutions[i][j]+"\" ";
@@ -167,9 +167,9 @@ bool checkSolution()
             {
                 if (captures[i].size() != 0)
                 {
-                    hint = "Check number ";
+                    hint = "Line number ";
                     hint += to_string(i+1);
-                    hint += ". Be aware of expressions that capture blank strings";
+                    hint += " should not be captured";
                     return false;
                 }
             }
@@ -177,9 +177,9 @@ bool checkSolution()
             {
                 if (captures[i].size() == 0)
                 {
-                    hint = "Check number ";
+                    hint = "Line number ";
                     hint += to_string(i+1);
-                    hint += ". This should be captured";
+                    hint += " should be captured";
                     return false;
                 }
             }
@@ -202,31 +202,35 @@ void drawScreen()
     move(1,16);
     addstr(replacePattern.c_str());
     move(2,0);
-    addstr("Extended Regex [ ]    Global Tag [ ]    Replace Mode [ ]");
-    
+    addstr("Extended Regex [ ]    Global Tag [ ]      ");
+    if (replaceMode)
+        addstr("--Replace Mode--");
+    else
+        addstr("--Search Mode--");
+
     if (extended)
         mvaddch(2,16,'X');
     if (global)
         mvaddch(2,34,'X');
-    if (replaceMode)
-        mvaddch(2,54,'X');
-    
 
-    move(4,0);
+    move(5,0);
     addstr("HINT:  ");
     if (!checkSolution())
         addstr(hint.c_str());
     else
+    {
+        attron(COLOR_PAIR(3));
         addstr("CORRECT! Press any key to continue");
-    move(5,0);
+        attroff(COLOR_PAIR(3));
+    }
+    move(4,0);
     addstr("TASK:  ");
     addstr(prompt.c_str());
+
     for (int i = 0; i < lines.size(); i++)
     {
         int color = 1;
         
-        init_pair(1, COLOR_BLACK, COLOR_GREEN);
-        init_pair(2, COLOR_BLACK, COLOR_BLUE);
         move(7,0);
         addstr("Text:");
         move(8+i,0);    
@@ -420,6 +424,9 @@ void initCurses()
     noecho();
     mousemask(BUTTON1_PRESSED, NULL);
     keypad(stdscr, TRUE);
+    init_pair(1, COLOR_BLACK, COLOR_GREEN);
+    init_pair(2, COLOR_BLACK, COLOR_BLUE);
+    init_pair(3, COLOR_GREEN, COLOR_BLACK);
 }
 
 
