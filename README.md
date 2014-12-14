@@ -1,7 +1,7 @@
 regexProgram
 ============
 
-A simple regular app for solving problem
+A simple regular expressions app for solvingproblems
 
 Making the file
 ---
