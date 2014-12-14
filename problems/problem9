@@ -1,0 +1,34 @@
+--prompt
+Real Applications 2: Capture simple email addresses. Have user name in \1, domain name in \2.
+--line
+Contact information:
+General Questions - Questions@example.com
+Phone - (409)555 9123
+Support - Support@company.com
+          customers@example2.com
+          spammail@organization.org
+CEO email - IamAwesome@CEO.company.com
+--capture
+
+Questions@example.com
+
+Support@company.com
+customers@example2.com
+spammail@organization.org
+IamAwesome@CEO.company.com
+--1
+
+Questions
+
+Support
+customers
+spammail
+IamAwesome
+--2
+
+example.com
+
+company.com
+example2.com
+organization.org
+CEO.company.com

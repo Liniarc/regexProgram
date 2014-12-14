@@ -1,0 +1,22 @@
+--prompt
+Bracket expression: Match any line with any CAPTIAL LETTERS.
+--line
+Hello, World!
+Success
+ABC
+printf("ERROR");
+who am I?
+laTeX
+hunter22
+failure
+i am sam
+--match
+1
+1
+1
+1
+1
+1
+
+
+

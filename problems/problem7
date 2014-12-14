@@ -1,0 +1,14 @@
+--prompt
+Replace: replace the first word of each line with "My"
+--line
+The house is on fire
+Her cat is adorable
+Jupiter's mass is enormous
+Their classes are fun
+outer space is outdated
+--replace
+My house is on fire
+My cat is adorable
+My mass is enormous
+My classes are fun
+My space is outdated

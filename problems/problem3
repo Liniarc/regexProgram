@@ -1,0 +1,18 @@
+--prompt
+Start and end of strings: match strings that start or end with quotes
+--line
+""
+"Hello"
+"To be, or not to be"
+" <- is a quote
+Also a quote -> "
+Goodbye
+printf("");
+--match
+1
+1
+1
+1
+1
+
+

@@ -1,0 +1,18 @@
+--prompt
+Repeats: Match all strings that contain lol's
+--line
+lol
+lool
+loooooooool
+a lolcat
+hello
+toolbox
+long fall
+--match
+1
+1
+1
+1
+
+
+

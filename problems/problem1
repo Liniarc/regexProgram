@@ -1,0 +1,18 @@
+--prompt
+Literal Strings: Match the lines with the string "abc." in them.
+--line
+abc.
+abc.def
+cout << "abc." << endl
+abc
+abcdef
+123
+abacus
+--match
+1
+1
+1
+
+
+
+

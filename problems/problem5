@@ -1,0 +1,23 @@
+--prompt
+Capture groups: Capture the name of all pdf files in capture group 1
+--line
+test.pdf
+hello_world.pdf
+passwords.doc.pdf
+not_a_virus.pdf.exe
+image.png
+typo.pfe
+--capture
+test.pdf
+hello_world.pdf
+passwords.doc.pdf
+
+
+
+--1
+test
+hello_world
+passwords.doc
+
+
+

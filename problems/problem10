@@ -1,0 +1,18 @@
+--prompt
+Real Application 3: replace the function "foo(a, b)" with "bar(b, a) "
+--line
+int main(){
+foo(a, b);
+foo(5, "fizz");
+cout << foo(5 + a, b + "fizz") << endl;
+int foo = foo(BUZZ_FLAG, "false"); 
+foo += foo(0, "") + foo(1, " ");
+}
+--replace
+int main(){
+bar(b, a);
+bar("fizz", 5);
+cout << bar(b + "fizz", 5 + a) << endl;
+int foo = bar("false", BUZZ_FLAG); 
+foo += bar("", 0) + bar(" ", 1);
+}
