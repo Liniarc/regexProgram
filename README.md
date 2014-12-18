@@ -18,7 +18,8 @@ $ ./regex
 Brief interface explaination
 ---
 Use the arrow keys or mouse to move between "Regex pattern:" and "Replace with:"    
-Use mouse to toggle Extended regex and Global Tag.
+Use mouse to toggle Extended regex and Global Tag.    
+The `TASK` tells you what you should try and accomplish for that level.   
 
 Making your own problems
 ---
@@ -33,8 +34,14 @@ This is where your prompt goes.
 Each line of these are the possible strings/complete lines/sentences/etc. to capture.
 
 `--match`    
-Indicates a string matching problem (as opposed to a replace problem)    
-Each line indicates a [TODO FIX THIS EXPLAINATION]
+Indicates a string matching problem (as opposed to a replace or capture problem)    
+Each line indicates whether or not a regex should match that corresponding string/sentence.    
+A blank line indicates not matching, anything else indicates matching.
+
+`--capture`
+Indicates a string capture problem (as opposed to a replace or matching problem)    
+Each line corresponds to the capture groups that are captured by the regex.    
+These lines indicate what should be captured by `\0` or the entire regex.    
 
 `--replace`    
 Indicates a replace problem (as opposed to a find problem)
