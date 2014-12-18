@@ -20,6 +20,7 @@ Brief interface explaination
 Use the arrow keys or mouse to move between "Regex pattern:" and "Replace with:"    
 Use mouse to toggle Extended regex and Global Tag.    
 The `TASK` tells you what you should try and accomplish for that level.   
+Exit the program with `Ctrl+C`
 
 Making your own problems
 ---
@@ -42,6 +43,18 @@ A blank line indicates not matching, anything else indicates matching.
 Indicates a string capture problem (as opposed to a replace or matching problem)    
 Each line corresponds to the capture groups that are captured by the regex.    
 These lines indicate what should be captured by `\0` or the entire regex.    
+Following `--n` lines are what should be captured by the corresponding capture groups. i.e. `\1` `\2`
 
 `--replace`    
-Indicates a replace problem (as opposed to a find problem)
+Indicates a replace problem (as opposed to a find problem)    
+Each line indicates what the capture and replace regex should return.
+
+TODOs
+---
+Create a "main menu" or pass the program parameters to indicate levels/difficulty
+Create additional levels
+Improve the gui to be more clear and helpful
+
+Known bugs
+---
+In replace mode, if the global flag is not set, it will replace globally.
