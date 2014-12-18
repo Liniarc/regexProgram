@@ -51,9 +51,9 @@ Each line indicates what the capture and replace regex should return.
 
 TODOs
 ---
-Create a "main menu" or pass the program parameters to indicate levels/difficulty
-Create additional levels
-Improve the gui to be more clear and helpful
+Create a "main menu" or pass the program parameters to indicate levels/difficulty    
+Create additional levels    
+Improve the gui to be more clear and helpful    
 
 Known bugs
 ---
