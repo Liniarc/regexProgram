@@ -1,7 +1,7 @@
 Practice Regular Expressions
 ============
 
-This is a simple C++ application which allows you to practice creating [regular expression](http://en.wikipedia.org/wiki/Regular_expression) patterns. We have provided 10 prompts which cover a variety of regular expression pattern usages. With this program, you can modify the prompts we have provided and also create your own prompts to solve. This program will highlight which charaters match the regular expression pattern that you type in and will not allow continuing to the next problem until the current problem is solved correct.
+This is a simple C++ application which allows you to practice creating [regular expression](http://en.wikipedia.org/wiki/Regular_expression) patterns. We have provided 10 prompts which cover a variety of regular expression pattern usages. With this program, you can modify the prompts we have provided and also create your own prompts to solve. This program will highlight which characters match the regular expression pattern that you type in and will not allow continuing to the next problem until the current problem is solved correct.
 
 ![alt text](http://i.imgur.com/qZTMalh.gif "gif demo")
 
