@@ -21,6 +21,8 @@ Interface
 |:-----|:-----|
 | Arrow keys/mouse | Move between `Regex pattern:` and `Replace with:`|
 | Mouse | Toggles `Extended regex` and `Global Tag` checkboxes. |
+| `Ctrl+E` | Toggles `Extended regex` checkbox. |
+| `Ctrl+G` | Toggles `Global Tag` checkbox. |
 | `Ctrl+C` | Exits the program. |
 
 | Onscreen | Description |

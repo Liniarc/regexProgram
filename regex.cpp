@@ -30,13 +30,16 @@ bool replaceMode = false;
 bool match = false;
 bool finished = false;
 
+static const int CTRL_E = 5;
+static const int CTRL_G = 7;
+
 void mouseAction(int mx, int my)
 {
     if (my == 2)
     {
-        if (mx < 18)
+        if (mx < 27)
             extended = !extended;
-        else if (mx > 22 && mx < 36)
+        else if (mx > 31 && mx < 45)
             global = !global;
         //else if (mx > 38 && mx < 57)
         //    replaceMode = !replaceMode;
@@ -99,6 +102,12 @@ void keyAction( int ch )
             if (x > replacePattern.length())
                 x = replacePattern.length();
             break;
+        case CTRL_E:
+            extended = !extended;
+            break;
+        case CTRL_G:
+            global = !global;
+            break;
         default:
             if (ch >= 32 && ch < 127)
             {
@@ -107,7 +116,7 @@ void keyAction( int ch )
                 else
                     replacePattern.insert(replacePattern.begin()+x, ch);
                 x++;
-            }
+            } 
     }
 }
 
@@ -202,16 +211,16 @@ void drawScreen()
     move(1,16);
     addstr(replacePattern.c_str());
     move(2,0);
-    addstr("Extended Regex [ ]    Global Tag [ ]      ");
+    addstr("Extended Regex (Ctrl-E) [ ]    Global Tag (Ctrl-G) [ ]      ");
     if (replaceMode)
         addstr("--Replace Mode--");
     else
         addstr("--Search Mode--");
 
     if (extended)
-        mvaddch(2,16,'X');
+        mvaddch(2,25,'X');
     if (global)
-        mvaddch(2,34,'X');
+        mvaddch(2,52,'X');
 
     move(5,0);
     addstr("HINT:  ");
