@@ -54,4 +54,3 @@ Improve the gui to be more clear and helpful
 
 Known bugs
 ---
-In replace mode, if the global flag is not set, it will replace globally.

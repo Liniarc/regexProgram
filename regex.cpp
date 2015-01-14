@@ -356,7 +356,10 @@ void performRegex()
             }
         }
 
-        replaced.push_back(regex_replace(s,r,replacePattern));
+        if (global)
+            replaced.push_back(regex_replace(s,r,replacePattern));
+        else
+            replaced.push_back(regex_replace(s,r,replacePattern,regex_constants::format_first_only));
     }
 }
 
